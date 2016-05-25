@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController">
+            <connections>
+                <outlet property="leftTableView" destination="pAz-0s-40h" id="VLF-I8-3XJ"/>
+                <outlet property="rightTableView" destination="rf3-JG-U1j" id="cXW-AI-aUI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-0s-40h" userLabel="左侧表格">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="d3D-IS-4jC"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fAI-IV-qgb"/>
+                        <outlet property="delegate" destination="-1" id="HaI-g2-ZR3"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="user" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rf3-JG-U1j" userLabel="右侧表格">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2Wf-yi-F0K"/>
+                        <outlet property="delegate" destination="-1" id="Y3S-R0-0vi"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rf3-JG-U1j" secondAttribute="bottom" id="6Eb-4I-rxV"/>
+                <constraint firstItem="pAz-0s-40h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BeI-q1-BfR"/>
+                <constraint firstAttribute="trailing" secondItem="rf3-JG-U1j" secondAttribute="trailing" id="IGu-T5-Ejg"/>
+                <constraint firstItem="rf3-JG-U1j" firstAttribute="leading" secondItem="pAz-0s-40h" secondAttribute="trailing" id="IrO-38-Igj"/>
+                <constraint firstItem="pAz-0s-40h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QDX-mq-P52"/>
+                <constraint firstItem="rf3-JG-U1j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W96-bB-Czd"/>
+                <constraint firstAttribute="bottom" secondItem="pAz-0s-40h" secondAttribute="bottom" id="uBA-Ge-MEH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="255.5" y="172.5"/>
+        </view>
+    </objects>
+</document>
